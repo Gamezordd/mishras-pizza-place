@@ -1,0 +1,14 @@
+.sort-dropdown{
+    background-color: #afd275 !important;
+    border-color: #afd275 !important;
+}
+
+.sort-dropdown:focus{
+    box-shadow: 0 0 0 0.2rem #afd27530 !important;
+}
+
+@media (max-width: 800px){
+    .meat-text{
+        display: none;
+    }
+}

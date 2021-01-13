@@ -1,1 +1,4 @@
 export const POPULATE_MENU = "POPULATE_MENU";
+export const UPDATE_CART = "UPDATE_CART";
+export const UPDATE_FILTER = "UPDATE_FILTER";
+export const UPDATE_SORTING = "UPDATE_SORTING";
