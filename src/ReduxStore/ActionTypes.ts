@@ -1,0 +1,1 @@
+export const POPULATE_MENU = "POPULATE_MENU";

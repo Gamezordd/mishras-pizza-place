@@ -1,0 +1,1 @@
+export {BodyComponent as default} from './BodyComponent';
