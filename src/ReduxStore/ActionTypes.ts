@@ -1,4 +1,5 @@
 export const POPULATE_MENU = "POPULATE_MENU";
-export const UPDATE_CART = "UPDATE_CART";
+export const ADDTO_CART = "ADDTO_CART";
+export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 export const UPDATE_FILTER = "UPDATE_FILTER";
 export const UPDATE_SORTING = "UPDATE_SORTING";

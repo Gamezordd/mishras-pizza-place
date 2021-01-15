@@ -8,9 +8,9 @@ export const populateMenu = (resp: any) => ({
     payload: resp
 });
 
-export const updateCart = (cartData: any) => ({
-    type: ActionTypes.UPDATE_CART,
-    payload: cartData
+export const addToCart = (item: any) => ({
+    type: ActionTypes.ADDTO_CART,
+    payload: item
 })
 
 export const updateSorting = (data: String) => ({
@@ -21,4 +21,9 @@ export const updateSorting = (data: String) => ({
 export const updateFilter = (data: boolean) => ({
     type: ActionTypes.UPDATE_FILTER,
     payload: data
+})
+
+export const removeFromCart = (id: any) => ({
+    type: ActionTypes.REMOVE_FROM_CART,
+    payload: id
 })

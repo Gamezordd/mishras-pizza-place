@@ -1,8 +1,9 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import { Card, Col, Row, Spinner } from 'react-bootstrap';
+import { Button, Card, Col, Row, Spinner } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import {Actions} from '../../ReduxStore';
 import {MenuAPI} from './constants';
+import { MenuBody } from './MenuBody';
 
 const mapStateToProps = (state: any) => {
     return{
@@ -16,8 +17,14 @@ const mapDispatchToProps = (dispatch: any) => {
     }
 }
 
-const MenuComponentNoRedux = (props: any) =>{
-    const [isLoading, setLoading] = useState(true);
+interface IProps{
+    data: any,
+    loadMenu: (res: any) => void,
+    nextPage: () => void,
+}
+
+const MenuComponentNoRedux = (props: IProps) =>{
+    const [isLoading, setLoading] = useState(false);
 
     useEffect(() => {
         // fetchMenu();
@@ -67,7 +74,13 @@ const MenuComponentNoRedux = (props: any) =>{
     
     return(
         <Fragment>
-
+            <MenuBody/>
+            <div className='next-btn'>
+                <Button onClick={() => props.nextPage()} style={{backgroundColor:'#afd275', borderColor:'#afd275'}}>Go To Cart <i className='fa fa-chevron-right'/></Button>
+                <div className='count-badge'>
+                    <div className='badge-count'>20</div>
+                </div>
+            </div>
         </Fragment>
     )
 }

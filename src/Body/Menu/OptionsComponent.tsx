@@ -29,7 +29,7 @@ const sortOptions = ['Price', 'Rating'];
 const OptionsNoConnect = (props: IProps) => {
    
     return(
-        <Row style={{height: '60px'}} className='justify-content-between px-4 align-items-center'>
+        <Row style={{height: '130px'}} className='justify-content-between px-4 align-items-center'>
             <div>
             <Dropdown>
                 <Dropdown.Toggle className='sort-dropdown'>
