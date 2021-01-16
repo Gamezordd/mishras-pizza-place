@@ -11,3 +11,9 @@
   height: 30vh;
   min-height: 300px;
 }
+
+.final-screen-body{
+  text-align: center;
+  padding: 10vw;
+  height: calc(100vh - 450px);
+}

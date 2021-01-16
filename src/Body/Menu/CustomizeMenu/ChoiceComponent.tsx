@@ -19,8 +19,9 @@ export const ChoiceComponent = (props: IProps) => {
 	if (isRadio) {
 		return (
 			<ToggleButtonGroup
-				name="rara"
+				name="single-select"
 				type="radio"
+				vertical
 				onChange={(e) => onSelection([].concat(e))}
 			>
 				{data.map((i: any, ind) => {
@@ -39,13 +40,16 @@ export const ChoiceComponent = (props: IProps) => {
 	} else {
 		return (
 			<ToggleButtonGroup
+				vertical
 				type="checkbox"
-				name="habibi"
+				name="multiple-select"
 				onChange={(e) => onSelection(e)}
+				style={{marginBottom: '40px'}}
 			>
 				{data.map((i: any, ind) => {
 					return (
 						<ToggleButton
+							size='sm'
 							variant="info"
 							key={"1221" + ind}
 							value={i.size ? i.size : i.name}

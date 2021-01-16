@@ -9,7 +9,22 @@
 
 .splash-text{
     border: 1px solid #ffffff;
-    margin-left: 30vw;
-    margin-right: 30vw;
-    padding: 40px;
 }
+
+@media (min-width: 801px){
+    .splash-text{
+        margin-left: 30vw;
+        margin-right: 30vw;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 800px){
+    .splash-text{
+        margin-left: 10vw;
+        margin-right: 10vw;
+        padding: 40px;
+    }
+}
+
+

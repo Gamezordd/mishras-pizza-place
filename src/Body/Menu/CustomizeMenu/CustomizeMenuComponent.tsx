@@ -53,20 +53,20 @@ export const CustomizeMenuNoRedux = (props: IProps) => {
 	return (
 		<Modal
 			show={props.isOpen}
-			size="lg"
+			size='sm'
 			onHide={() => {
 				handleHide();
 			}}
 		>
-			<Modal.Header>
-				<h2>Customize</h2>
+			<Modal.Header style={{textAlign: 'center'}}>
+				<h2  >Customize</h2>
 			</Modal.Header>
 			<Modal.Body>
 				<Col>
-					<Row>
+					<Row className='justify-content-center'>
 						<h4>Select Size:</h4>
 					</Row>
-					<Row>
+					<Row className='justify-content-center'>
 						<ChoiceComponent
 							isRadio={props.baseData.size[0].isRadio}
 							data={props.baseData.size[0].items}
@@ -80,10 +80,10 @@ export const CustomizeMenuNoRedux = (props: IProps) => {
 							<p>&nbsp;</p>
 						)}
 					</Row>
-					<Row className="pt-4">
+					<Row className="pt-4 justify-content-center">
 						<h4>Select Toppings:</h4>
 					</Row>
-					<Row>
+					<Row className='justify-content-center' >
 						<ChoiceComponent
 							isRadio={props.baseData.toppings[0].isRadio}
 							data={props.baseData.toppings[0].items}
