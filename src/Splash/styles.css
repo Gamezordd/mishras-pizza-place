@@ -1,0 +1,15 @@
+.splash-background{
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    text-align: center;
+    padding-top: 30vh;
+    background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1914&q=80');
+}
+
+.splash-text{
+    border: 1px solid #ffffff;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    padding: 40px;
+}
