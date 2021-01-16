@@ -19,9 +19,11 @@ export const BodyComponent = () => {
 				/>
 			) : (
 				<Container>
-					<div className='final-screen-body'>
+					<div className="final-screen-body">
 						<h2>Order Placed! Thank you for shopping with us.</h2>
-						<h4 style={{color:'GrayText'}}>You may close this window now</h4>
+						<h4 style={{ color: "GrayText" }}>
+							You may close this window now
+						</h4>
 					</div>
 				</Container>
 			)}
