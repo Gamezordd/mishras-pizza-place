@@ -18,7 +18,12 @@ export const BodyComponent = () => {
 					onForward={() => setPage(currPage + 1)}
 				/>
 			) : (
-				<div></div>
+				<Container>
+					<div style={{textAlign:'center', padding:'20vh'}}>
+						<h2>Order Placed! Thank you for shopping with us.</h2>
+						<h4 style={{color:'GrayText'}}>You may close this window now</h4>
+					</div>
+				</Container>
 			)}
 		</Container>
 	);
