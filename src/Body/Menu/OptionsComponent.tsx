@@ -1,56 +1,84 @@
-import React from 'react';
-import { Row, Col, Dropdown } from 'react-bootstrap';
-import { connect } from 'react-redux';
-import { Actions } from '../../ReduxStore';
-import {MeatToggle} from './MeatToggle';
-import './styles.css';
+import React, { useState } from "react";
+import { Row, Dropdown, Col } from "react-bootstrap";
+import { connect } from "react-redux";
+import { Actions } from "../../ReduxStore";
+import { MeatToggle } from "./MeatToggle";
+import "./styles.css";
 
 const mapStateToProps = (state: any) => {
-    return{
-        data: state.data,
-    }
-}
+	return {
+		data: state.data,
+	};
+};
 
 const mapDispatchToProps = (dispatch: any) => {
-    return{
-        loadMenu: (res: any) => dispatch(Actions.populateMenu(res)),
-        setSort: (param: String) => dispatch(Actions.updateSorting(param)),
-        setNonVeg: (isNonVeg: boolean) => dispatch(Actions.updateFilter(isNonVeg)),
-    }
+	return {
+		loadMenu: (res: any) => dispatch(Actions.populateMenu(res)),
+		setSort: (param: String) => dispatch(Actions.updateSorting(param)),
+		setNonVeg: (isNonVeg: boolean) =>
+			dispatch(Actions.updateFilter(isNonVeg)),
+	};
+};
+
+interface IProps {
+	onSort: (param: string | null) => void;
+	onFilter: (isNonVeg: boolean) => void;
 }
 
-interface IProps{
-    setSort: (param: String) => void,
-    setNonVeg: (isNonVeg: boolean) => void,
-}
-
-const sortOptions = ['Price', 'Rating'];
+const sortOptions = ["Price", "Rating"];
 
 const OptionsNoConnect = (props: IProps) => {
-   
-    return(
-        <Row style={{height: '130px'}} className='justify-content-between px-4 align-items-center'>
-            <div>
-            <Dropdown>
-                <Dropdown.Toggle className='sort-dropdown'>
-                    Sort By
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                    {sortOptions.map((optn,ind) =>{
-                        return(
-                            <Dropdown.Item key={'123' + ind} onClick={() => {props.setSort(optn)}}>{optn}</Dropdown.Item>
-                        )
-                    })}
-                </Dropdown.Menu>
-            </Dropdown>
-            </div>
-            <Row className='px-3'>
-                <h4 className='meat-text'>Showing</h4> &nbsp; &nbsp;
-                <MeatToggle onToggle={(status) => props.setNonVeg(status)}/> &nbsp;&nbsp;
-                <h4 className='meat-text'>Pizzas</h4>
-            </Row>
-        </Row>
-    )
-}
+	const [dropdownVal, setDropdown] = useState("Select");
+	return (
+		<Row
+			style={{ height: "130px" }}
+			className="justify-content-between px-4 align-items-center"
+		>
+			<Col>
+				<Row className='align-items-center' >
+					<h5>Sort by: &nbsp;</h5>
+					<Dropdown>
+						<Dropdown.Toggle className="sort-dropdown">
+							{dropdownVal}
+						</Dropdown.Toggle>
+						<Dropdown.Menu>
+							{sortOptions.map((optn, ind) => {
+								return (
+									<Dropdown.Item
+										key={"123" + ind}
+										onClick={() => {
+											props.onSort(optn);
+											setDropdown(optn);
+										}}
+									>
+										{optn}
+									</Dropdown.Item>
+								);
+							})}
+						</Dropdown.Menu>
+					</Dropdown>
+				</Row>
+			</Col>
+			<Col>
+				<Row className='justify-content-end align-items-center'>
+					<div >
+						<Row>
+							<h4 className="meat-text">Showing</h4> &nbsp; &nbsp;
+								<MeatToggle
+									onToggle={(status) => props.onFilter(status)}
+								/>{" "}
+								&nbsp;&nbsp;
+							<h4 className="meat-text">Pizzas</h4>
+						</Row>
+					</div>
+					
+				</Row>
+			</Col>
+		</Row>
+	);
+};
 
-export const Options = connect(mapStateToProps, mapDispatchToProps)(OptionsNoConnect)
+export const Options = connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(OptionsNoConnect);

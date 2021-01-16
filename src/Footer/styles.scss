@@ -1,0 +1,35 @@
+.beating-heart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .human-heart {
+    // margin: 5em;
+    padding-bottom: 14px;
+    animation: .8s infinite beatHeart;
+  }
+  
+  @keyframes beatHeart {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.1);
+    }
+    40% {
+      transform: scale(1);
+    }
+    60% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .footer-style{
+    margin-top: 30px;
+    background-color: #e7717d;
+    margin-bottom: 0;
+    text-align: center;
+  }

@@ -1,7 +1,7 @@
-$lightGrey: #F2F2F2;
-$grey: #6E6E6E;
-$white: #FFFFFF;
-$blue: #1849AB;
+$lightGrey: #f2f2f2;
+$grey: #6e6e6e;
+$white: #ffffff;
+$blue: #1849ab;
 
 // body {
 //   background-color: $lightGrey;
@@ -12,71 +12,70 @@ $blue: #1849AB;
 // }
 
 .content {
-  background-color: #ffffff00;
-  display: flex;
-  justify-content: center;
-  transform: translate(0,2px);
-//   padding: 2rem;
-//   width: 400px;
+	background-color: #ffffff00;
+	display: flex;
+	justify-content: center;
+	transform: translate(0, 2px);
+	//   padding: 2rem;
+	//   width: 400px;
 }
 
 .switch {
-  position: relative;
-  display: inline-block;
-  width: 55px;
-  height: 30px;
+	position: relative;
+	display: inline-block;
+	width: 55px;
+	height: 30px;
 }
 
 .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+	opacity: 0;
+	width: 0;
+	height: 0;
 }
 
 .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: white;
-  transition: .4s;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: white;
+	transition: 0.4s;
 }
 
 .slider:before {
-  position: absolute;
-  content: "";
-  height: 22px;
-  width: 22px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: .4s;
+	position: absolute;
+	content: "";
+	height: 22px;
+	width: 22px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: white;
+	background-color: white;
 }
 
 input + .slider {
-  box-shadow: 0 0 8px 1px #00000020;
-  outline: none;  
+	box-shadow: 0 0 8px 1px #00000020;
+	outline: none;
 }
 input:not(:checked) + .slider:before {
-    background-color: green;
+	background-color: green;
 }
 
 input:checked + .slider:before {
-    background-color: red;
-    transform: translateX(23px);
+	background-color: red;
+	transform: translateX(23px);
 }
 
-
 .slider.round {
-  border-radius: 34px;
+	border-radius: 34px;
 }
 
 .slider.round:before {
-  border-radius: 50%;
+	border-radius: 50%;
 }

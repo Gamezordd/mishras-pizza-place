@@ -1,34 +1,30 @@
-import React from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
-import { connect } from 'react-redux';
-import { Actions } from '../../ReduxStore';
-import DATA from '../../dummydata';
-import { MenuCard } from './MenuCard/MenuCard';
-
-const mapStateToProps = (state: any) => {
-    return{
-        data: state.data,
-    }
+import React from "react";
+import { Col, Row } from "react-bootstrap";
+import { connect } from "react-redux";
+import { MenuCard } from "./MenuCard/MenuCard";
+interface IProps {
+	data: any[];
 }
 
-interface IProps{
-
-}
-const MenuBodyNoStore = (props: IProps) => {
-    return(
-        <Row>
-            {
-                DATA.map(pza => {
-                    return(
-                        <Col key={pza.id} xs={12} sm={6} lg={4} xl={3}>
-                            <MenuCard pza={pza}/>
-                        </Col>
-                    )
-                })
-            }
-            
-        </Row>
-    )
-}
-
-export const MenuBody = connect(mapStateToProps)(MenuBodyNoStore);
+export const MenuBody = (props: IProps) => {
+	if(props.data.length > 0){
+		return (
+			<Row>
+				{props.data.map((pza) => {
+					return (
+						<Col key={pza.id} xs={12} sm={6} lg={4} xl={3}>
+							<MenuCard pza={pza} />
+						</Col>
+					);
+				})}
+			</Row>
+		);
+	}
+	
+	return(
+		<h2 style={{textAlign:'center', paddingTop:'20vh', paddingBottom:'20vh'}}>
+			Something went wrong, please try reloading.
+		</h2>
+	)
+	
+};
