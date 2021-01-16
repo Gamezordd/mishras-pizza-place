@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/treflo-pizza-place/static/css/main.f1bb6eb8.chunk.css",
+    "main.js": "/treflo-pizza-place/static/js/main.c5c5e610.chunk.js",
+    "main.js.map": "/treflo-pizza-place/static/js/main.c5c5e610.chunk.js.map",
+    "runtime-main.js": "/treflo-pizza-place/static/js/runtime-main.5fc05409.js",
+    "runtime-main.js.map": "/treflo-pizza-place/static/js/runtime-main.5fc05409.js.map",
+    "static/js/2.4dc918e6.chunk.js": "/treflo-pizza-place/static/js/2.4dc918e6.chunk.js",
+    "static/js/2.4dc918e6.chunk.js.map": "/treflo-pizza-place/static/js/2.4dc918e6.chunk.js.map",
+    "static/js/3.8c59bdee.chunk.js": "/treflo-pizza-place/static/js/3.8c59bdee.chunk.js",
+    "static/js/3.8c59bdee.chunk.js.map": "/treflo-pizza-place/static/js/3.8c59bdee.chunk.js.map",
+    "index.html": "/treflo-pizza-place/index.html",
+    "static/css/main.f1bb6eb8.chunk.css.map": "/treflo-pizza-place/static/css/main.f1bb6eb8.chunk.css.map",
+    "static/js/2.4dc918e6.chunk.js.LICENSE.txt": "/treflo-pizza-place/static/js/2.4dc918e6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5fc05409.js",
+    "static/js/2.4dc918e6.chunk.js",
+    "static/css/main.f1bb6eb8.chunk.css",
+    "static/js/main.c5c5e610.chunk.js"
+  ]
+}
